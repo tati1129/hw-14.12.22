@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;1,400;1,700&family=Red+Hat+Display:wght@300;400;500;600;700;800;900&family=Rubik+Vinyl&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "PT Serif", serif;
+}
+body {
+  background-color: #c8d8f8;
+  max-width: 900px;
+  margin: 20px auto;
+}
+form {
+  width: 700px;
+  background-color: white;
+  border-radius: 30px;
+  margin: 40px auto;
+  padding: 20px;
+  display: flex;
+}
+
+input {
+  width: 100%;
+  padding: 15px;
+  font-size: 20px;
+  background-color: #e5ecf9;
+  border-radius: 15px 0 0 20px;
+  border: none;
+  outline: none;
+}
+.submit-btn {
+  padding: 15px;
+  background-color: rgb(16, 16, 16);
+  color: white;
+  border-radius: 0 20px 20px 0;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.container {
+  max-width: 940px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.product {
+  max-width: 440px;
+  border-radius: 15px;
+  background-color: #f2f4f8;
+  padding: 15px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 90px);
+  grid-template-areas:
+    " f1 f4"
+    " f2 f4"
+    " f3 f5"
+    " f3 f6";
+}
+.title {
+  grid-area: f1;
+  font-size: 20px;
+  text-align: center;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-height: 1.4;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+}
+.category {
+  grid-area: f2;
+  font-size: 18px;
+  padding: 20px;
+  font-style: italic;
+}
+.info {
+  grid-area: f3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+  line-height: 1.3em;
+  text-overflow: ellipsis;
+}
+.info span {
+  font-size: 18px;
+  text-decoration: underline;
+  font-weight: 700;
+}
+.rating {
+  grid-area: f6;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
+}
+.score {
+  color:red;
+}
+.count{
+    color: rgb(19, 19, 211);
+}
+.img {
+  grid-area: f4;
+  width: 90%;
+  aspect-ratio: 1;
+  border-radius: 12px;
+  margin: 10px;
+}
+.img:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  width: 100%;
+  transition: 0.8s;
+  cursor: pointer;
+}
+.price {
+  text-align: center;
+  padding: 30px;
+  font-size: 30px;
+  color: rgb(19, 169, 19);
+}
